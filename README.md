@@ -1,1 +1,3 @@
-# hosted-checkout-ios
+# HostedCheckout
+
+A description of this package.
