@@ -1,6 +1,6 @@
 //
-//  EmbeddedCheckout.swift
-//  MPGS Hoste
+//  HostedCheckout.swift
+//  sk8shop
 //
 //  Created by Nawaf Abdullah on 02/05/2023.
 //
@@ -8,8 +8,8 @@
 import SwiftUI
 import WebKit
  
-@available(iOS 13.0, *)
-public struct EmbeddedCheckout: UIViewRepresentable {
+struct HostedCheckout: UIViewRepresentable {
+ 
     var hostUrl: String
     var sessionId: String
     @Binding var paymentFinished: Bool
@@ -31,9 +31,9 @@ public struct EmbeddedCheckout: UIViewRepresentable {
     }
     
     class WebViewCoordinator: NSObject, WKNavigationDelegate {
-        var parent: EmbeddedCheckout
+        var parent: HostedCheckout
         
-        init(_ parent: EmbeddedCheckout) {
+        init(_ parent: HostedCheckout) {
             self.parent = parent
         }
         
