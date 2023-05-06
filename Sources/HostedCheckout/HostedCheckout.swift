@@ -9,7 +9,7 @@ import SwiftUI
 import WebKit
  
 @available(iOS 13.0, *)
-struct EmbeddedCheckout: UIViewRepresentable {
+public struct EmbeddedCheckout: UIViewRepresentable {
     var hostUrl: String
     var sessionId: String
     @Binding var paymentFinished: Bool
