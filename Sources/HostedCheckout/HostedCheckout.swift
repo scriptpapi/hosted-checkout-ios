@@ -1,6 +1,6 @@
 //
-//  HostedCheckout.swift
-//  Mastercard Payment Gateway Services
+//  EmbeddedCheckout.swift
+//  MPGS Hoste
 //
 //  Created by Nawaf Abdullah on 02/05/2023.
 //
@@ -9,8 +9,7 @@ import SwiftUI
 import WebKit
  
 @available(iOS 13.0, *)
-struct HostedCheckout: UIViewRepresentable {
- 
+struct EmbeddedCheckout: UIViewRepresentable {
     var hostUrl: String
     var sessionId: String
     @Binding var paymentFinished: Bool
@@ -32,9 +31,9 @@ struct HostedCheckout: UIViewRepresentable {
     }
     
     class WebViewCoordinator: NSObject, WKNavigationDelegate {
-        var parent: HostedCheckout
+        var parent: EmbeddedCheckout
         
-        init(_ parent: HostedCheckout) {
+        init(_ parent: EmbeddedCheckout) {
             self.parent = parent
         }
         
